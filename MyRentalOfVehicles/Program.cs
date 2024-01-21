@@ -24,11 +24,11 @@ class Program
         double hour = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
         Console.Write("Enter price per day: ");
-        double day = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        double days = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
         CarRental carRental = new CarRental(start, finish, new Vehicle(model));
 
-        RentalService rentalService = new RentalService(hour, day);
+        RentalService rentalService = new RentalService(hour, days);
 
         rentalService.ProcessInvoid(carRental);
 
